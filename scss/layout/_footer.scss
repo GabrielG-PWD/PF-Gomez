@@ -1,0 +1,31 @@
+.footer {
+  background-color: $colorArena;
+  &-principal {
+    .logo {
+      font-size: 2rem;
+      text-transform: uppercase;
+
+      img {
+        width: 60px;
+      }
+    }
+
+    .nav-link {
+      padding: 0;
+    }
+
+    .financiacion {
+      width: 50px;
+    }
+  }
+  &-inferior {
+    .bi {
+      font-size: 25px;
+      color: black;
+      transition: color $tiempoTransicion ease;
+      &:hover {
+        color: $colorEfectos;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.main-cursos {
+  top: 0;
+  @include heroConfig("../assets/img/fondo-cursos.jpg");
+  
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 10rem;
+      background-image: url("../assets/img/parallax.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 8rem 0;
+      padding-top: 0;
+      .btn {
+        @include botonEnviar;
+        &:hover {
+          background-color: transparent;
+          color: $colorArena;
+          border: 1px solid $colorArena;
+        }
+      }
+      
+      h2 {
+        padding: 4rem;
+        text-align: center;
+        color: white;
+        background-color: $colorAzul;
+        font-family: $fuenteTitulos;
+      }
+      .principiante {
+        color: white;
+        border-radius: none;
+        width: 100%;
+        padding: 2rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        h3,
+        h4 {
+          font-family: $fuenteTitulos;
+        }
+      }
+      .intermedio {
+        color: white;
+        border-radius: none;
+        width: 100%;
+        padding: 2rem;
+        align-self: end;
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: end;
+        h3,
+        h4 {
+          font-family: $fuenteTitulos;
+        }
+      }
+      .avanzado {
+        color: white;
+        border-radius: none;
+        width: 100%;
+        padding: 2rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        h3,
+        h4 {
+          font-family: $fuenteTitulos;
+        }
+      }
+    }  
+}

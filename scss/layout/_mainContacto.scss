@@ -1,0 +1,44 @@
+.main-contacto {
+  @include heroConfig("../assets/img/fondo-contacto.jpg");
+
+  .formulario {
+    background-color: $colorAzul;
+    h2, h4 {
+      font-family: $fuenteTitulos;
+      
+    }
+    
+    textarea {
+      resize: none;
+    }
+
+    input[type="submit"] {
+      @include botonEnviar;
+      &:hover {
+        background-color: transparent;
+        color: $colorArena;
+        border: 1px solid $colorArena;
+        
+      }
+    }
+
+    input,
+    textarea {
+      width: 100%;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+    }
+  }
+  .ubicaciones {
+    h2 {
+      font-family: $fuenteTitulos;
+    }
+    iframe {
+      padding-top: 2rem;
+      flex-basis: 400px;
+    }
+  }
+}

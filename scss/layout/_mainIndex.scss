@@ -1,0 +1,147 @@
+.main-index {
+  // Seccion presentacion
+  .presentacion {
+    &-titulos {
+      h2 {
+        font-family: $fuenteTitulos;
+      }
+    }
+  }
+
+  //Sección informacion
+  .info {
+    display: flex;
+    flex-direction: column;
+    background-color: $colorAzul;
+  
+    &-texto {
+      flex-basis: 45%;
+      padding: 20px;
+      padding-top: 48px;
+      h3 {
+        font-family: $fuenteTitulos;
+      }
+    }
+    &-imagen {
+      flex-basis: 25%;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  //Seccion galeria
+  .galeria {
+    h2 {
+      font-family: $fuenteTitulos;
+    }
+    .contenedor-imagenes {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-rows: 150px;
+      gap: 20px;
+      padding: 20px;
+      .items {
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.6);
+          opacity: 0;
+          transition: opacity 0.25s;
+          backdrop-filter: blur(5px);
+        }
+        &:hover::before {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        &:nth-child(1)::after {
+          content: "Aventuras";
+        }
+        &:nth-child(2)::after {
+          content: "Campamento";
+        }
+        &:nth-child(3)::after {
+          content: "Fogatas";
+        }
+        &:nth-child(4)::after {
+          content: "Salidas grupales";
+        }
+        &:nth-child(5)::after {
+          content: "Alojamiento";
+        }
+
+        &::after {
+          content: "";
+          font-family: $fuenteTitulos;
+          font-size: 1.5rem;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: transform 0.25s, opacity 0.25s;
+        }
+        &:hover::after {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .preguntas {
+    h2 {
+      font-family: $fuenteTitulos;
+    }
+    .accordion {
+      button {
+        color: $colorNegro;
+        transition: color $tiempoTransicion ease;
+        background-color: transparent;
+
+        &[aria-expanded='true'] {
+          border-bottom: 0.5px solid $colorEfectos;
+        }
+
+        &:hover, &:focus {
+          color: $colorEfectos;
+        }
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  // Sección aliados
+  .aliados {
+    h2 {
+      font-family: $fuenteTitulos;
+    }
+    .columna {
+      img {
+        width: 130px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,40 @@
+.main-viajes {
+  @include heroConfig("../assets/img/fondo-viajes.jpg");
+  background-image: linear-gradient(0deg, rgba(250, 250, 250, 0.74)),url("../assets/img/fondo-texturado2.jpg");
+  background-position: center;
+  background-size: cover;
+
+  .cards-viajes {
+    h2 {
+      font-family: $fuenteTitulos;
+    }
+    .card {
+      transition: transform 0.4s ease;
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 0px 0px 10px 1px rgba(97,97,97,0.75);
+      -webkit-box-shadow: 0px 0px 10px 1px rgba(97,97,97,0.75);
+      -moz-box-shadow: 0px 0px 10px 1px rgba(97,97,97,0.75);
+      }
+      &-title {
+        font-family: $fuenteTitulos;
+        font-weight: 600;
+      }
+    }
+
+    .btn {
+      @include botonEnviar;
+
+      &:hover {
+        background-color: transparent;
+        color: $colorNegro;
+        border: 1px solid $colorArena;
+      }
+    }
+  }
+
+
+
+
+
+}

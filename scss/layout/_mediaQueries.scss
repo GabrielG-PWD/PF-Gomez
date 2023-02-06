@@ -1,0 +1,168 @@
+@media screen and (max-width: 576px) {
+  header {
+    .navbar {
+      background-color:#212529;
+      &-brand {
+        display: none;
+      }
+      .nav-link {
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: $colorEfectos;
+          @include posicionLineaLinks;
+          height: 3px;
+          transform: scaleX(0);
+          transition: transform 0.4s;
+          transform-origin: center;
+        }
+        &:hover::after {
+          transform: scaleX(1);
+        }
+      }
+      .nav-item {
+        .active::after {
+          content: "";
+          position: absolute;
+          background-color: $colorEfectos;
+          @include posicionLineaLinks;
+          height: 3px;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------
+
+@media screen and (min-width: 576px) {
+  .main-index {
+    .galeria {
+      .contenedor-imagenes {
+        grid-template-columns: repeat(2, 1fr);
+        .items {
+          &:nth-child(1) {
+            grid-row-start: span 2;
+            grid-column-start: span 2;
+          }
+          &:nth-child(3) {
+            grid-row-start: span 2;
+          }
+          &:nth-child(4) {
+            grid-row-start: span 2;
+          }
+        }
+      }
+    }
+  }
+  .main-cursos {
+    .info {
+      .principiante {
+        width: 90%;
+        border-radius: 0 100px 100px 0;
+      }
+      .intermedio {
+        width: 90%;
+        border-radius: 100px 0 0 100px;
+      }
+      .avanzado {
+        width: 90%;
+        border-radius: 0 100px 100px 0;
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .main-index {
+    .info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      &-texto {
+        flex-basis: 45%;
+        padding: 48px 20px;
+      }
+      &-imagen {
+        flex-basis: 45%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .galeria {
+      .contenedor-imagenes {
+        grid-template-columns: repeat(3, 1fr);
+        .items {
+          &:nth-child(1) {
+            grid-column-start: span 1;
+            grid-row-start: span 2;
+          }
+          &:nth-child(2) {
+            grid-column-start: span 2;
+          }
+          &:nth-child(3) {
+            grid-row-start: span 1;
+          }
+          &:nth-child(4) {
+            grid-row-start: span 2;
+          }
+          &:nth-child(5) {
+            grid-column-start: span 2;
+          }
+        }
+      }
+    }
+  }
+
+  .main-cursos {
+    .info {
+      .principiante {
+        width: 70%;
+      }
+      .intermedio {
+        width: 70%;
+      }
+      .avanzado {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  .main-index {
+    .galeria {
+      .contenedor-imagenes {
+        grid-template-columns: repeat(4, 1fr);
+        .items {
+          &:nth-child(1) {
+            grid-column-start: span 2;
+            grid-row-start: span 2;
+          }
+          &:nth-child(2) {
+            grid-column-start: span 2;
+            grid-row-start: span 1;
+          }
+          &:nth-child(3) {
+            grid-row-start: span 2;
+            grid-column-start: span 2;
+          }
+          &:nth-child(4) {
+            grid-row-start: span 3;
+            grid-column-start: span 2;
+          }
+          &:nth-child(5) {
+            grid-column-start: span 2;
+            grid-row-start: span 2;
+          }
+        }
+      }
+    }
+  }
+}
